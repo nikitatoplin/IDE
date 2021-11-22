@@ -36,6 +36,10 @@ def choose_image():
 
 
 def search_grey(i, j, array, size):
+    """
+    >>> search_grey(0, 0, np.array(Image.open('img2.jpg')), 5)
+    19
+    """
     sum = int(np.sum(array[i:i + size, j:j + size, 0]) + np.sum(array[i:i + size, j:j + size, 1])
               + np.sum(array[i:i + size, j:j + size, 2])) / 3
     return int(sum // (size * size))
